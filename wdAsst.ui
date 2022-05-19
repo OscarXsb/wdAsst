@@ -1,0 +1,1880 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WdAsst</class>
+ <widget class="QMainWindow" name="WdAsst">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>681</width>
+    <height>370</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>681</width>
+    <height>370</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>681</width>
+    <height>370</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Microsoft YaHei UI</family>
+   </font>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>WdAsst</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="main_tab">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>661</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="searchTab">
+     <attribute name="title">
+      <string>查询单词</string>
+     </attribute>
+     <widget class="QLineEdit" name="search_box">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>70</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="search_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>75</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>查询单词</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="search_web">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>89</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>联网查询</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">search_mode</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="search_local">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>89</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>本地查询</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">search_mode</string>
+      </attribute>
+     </widget>
+     <widget class="QToolButton" name="search_btn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>查询</string>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="reset_search">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>230</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>重置</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>251</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>WdAsst 单词查询</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>245</x>
+        <y>0</y>
+        <width>31</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="result_search_box">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>10</y>
+        <width>371</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="isWrapping" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="addWords">
+     <attribute name="title">
+      <string>添加单词</string>
+     </attribute>
+     <widget class="QLabel" name="group_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>26</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>单词组别</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="eng_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>65</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>英文名</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="group_box">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>20</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="duplicatesEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="eng_input">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>60</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="chi_input">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>100</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="chi_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>105</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>中文名</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="part_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>145</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>词性</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="part_box">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>141</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="duplicatesEnabled">
+       <bool>true</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>名词 n.</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>动词 v.</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>形容词 adj.</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>副词 adv.</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>介词 prep.</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>连词 conj.</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>代词 pron.</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>冠词 art.</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>数词 num.</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>感叹词 interj.</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QToolButton" name="add_btn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>添加</string>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="reset_add">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>230</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>重置</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>0</y>
+        <width>20</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="chi_box">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>60</y>
+        <width>411</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="word_add_show_box">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>20</y>
+        <width>411</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="reciteWords">
+     <attribute name="title">
+      <string>单词测试</string>
+     </attribute>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="geometry">
+       <rect>
+        <x>3</x>
+        <y>5</y>
+        <width>651</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;输入单词&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="accessibleName">
+       <string/>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="type_word">
+       <property name="accessibleName">
+        <string/>
+       </property>
+       <attribute name="title">
+        <string>输入单词</string>
+       </attribute>
+       <widget class="QLineEdit" name="test_show_chi">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>251</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="tested_label">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>13</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>已测试单词</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="test_group_box">
+        <property name="geometry">
+         <rect>
+          <x>78</x>
+          <y>20</y>
+          <width>181</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Line" name="line_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>90</y>
+          <width>271</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="stop_test">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>190</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>停止测试</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="test_group_label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>54</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>单词组别</string>
+        </property>
+       </widget>
+       <widget class="Line" name="line_4">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>0</y>
+          <width>20</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>8</y>
+          <width>151</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QToolButton" name="test_word_clear_table">
+           <property name="text">
+            <string>清空表格</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="test_word_save_table">
+           <property name="text">
+            <string>保存表格</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QToolButton" name="test_word_group_checked_button">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>251</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>开始测试</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="test_input_eng">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>150</y>
+          <width>251</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tested_word_table">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>41</y>
+          <width>361</width>
+          <height>181</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+         </font>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <column>
+         <property name="text">
+          <string>单词</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>词性</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>释义</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>输入答案</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>正确答案</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>批改</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QToolButton" name="submit_test">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>190</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>提交答案</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="check_option">
+       <property name="accessibleName">
+        <string/>
+       </property>
+       <attribute name="title">
+        <string>选择释义</string>
+       </attribute>
+       <widget class="QLineEdit" name="test_translation_show_word">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>261</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>12</pointsize>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="test_translation_option_1">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>70</y>
+          <width>311</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Option A</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">test_translation_option_group</string>
+        </attribute>
+       </widget>
+       <widget class="QToolButton" name="test_translation_option_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>311</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Option B</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">test_translation_option_group</string>
+        </attribute>
+       </widget>
+       <widget class="QToolButton" name="test_translation_option_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>150</y>
+          <width>311</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Option C</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">test_translation_option_group</string>
+        </attribute>
+       </widget>
+       <widget class="QToolButton" name="test_translation_option_4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>190</y>
+          <width>311</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Option D</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">test_translation_option_group</string>
+        </attribute>
+       </widget>
+       <widget class="QPushButton" name="test_translation_read">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>20</y>
+          <width>41</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="test_translation_start">
+        <property name="geometry">
+         <rect>
+          <x>7</x>
+          <y>15</y>
+          <width>631</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>19</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>开始测试</string>
+        </property>
+       </widget>
+       <widget class="QLCDNumber" name="test_translation_time">
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>20</y>
+          <width>71</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="digitCount">
+         <number>2</number>
+        </property>
+        <property name="mode">
+         <enum>QLCDNumber::Dec</enum>
+        </property>
+        <property name="value" stdset="0">
+         <double>10.000000000000000</double>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="test_translation_group">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>20</y>
+          <width>201</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="test_translation_last_word">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>60</y>
+          <width>201</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>单词记录</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>85</y>
+          <width>101</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>已测试单词数量</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>105</y>
+          <width>101</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>正确数量</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>125</y>
+          <width>101</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>正确率</string>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="test_translation_reset_record">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>190</y>
+          <width>281</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>重置记录</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="test_trans_tested_count">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>85</y>
+          <width>101</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="test_trans_right_count">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>105</y>
+          <width>101</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="test_trans_percent">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>125</y>
+          <width>101</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>0%</string>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="test_translation_stop">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>150</y>
+          <width>281</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>停止测试</string>
+        </property>
+       </widget>
+       <zorder>test_translation_show_word</zorder>
+       <zorder>test_translation_option_1</zorder>
+       <zorder>test_translation_option_2</zorder>
+       <zorder>test_translation_option_3</zorder>
+       <zorder>test_translation_option_4</zorder>
+       <zorder>test_translation_read</zorder>
+       <zorder>test_translation_time</zorder>
+       <zorder>test_translation_group</zorder>
+       <zorder>test_translation_last_word</zorder>
+       <zorder>label_2</zorder>
+       <zorder>label_3</zorder>
+       <zorder>label_4</zorder>
+       <zorder>test_translation_reset_record</zorder>
+       <zorder>test_trans_tested_count</zorder>
+       <zorder>test_trans_right_count</zorder>
+       <zorder>test_trans_percent</zorder>
+       <zorder>test_translation_stop</zorder>
+       <zorder>test_translation_start</zorder>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="add_pronunciation">
+     <attribute name="title">
+      <string>添加读音</string>
+     </attribute>
+     <widget class="QTableWidget" name="pron_keyboard">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>30</y>
+        <width>247</width>
+        <height>212</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="autoScroll">
+       <bool>false</bool>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="textElideMode">
+       <enum>Qt::ElideNone</enum>
+      </property>
+      <property name="verticalScrollMode">
+       <enum>QAbstractItemView::ScrollPerItem</enum>
+      </property>
+      <property name="horizontalScrollMode">
+       <enum>QAbstractItemView::ScrollPerItem</enum>
+      </property>
+      <property name="showGrid">
+       <bool>true</bool>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::SolidLine</enum>
+      </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="rowCount">
+       <number>6</number>
+      </property>
+      <property name="columnCount">
+       <number>7</number>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>35</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>35</number>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderMinimumSectionSize">
+       <number>35</number>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>35</number>
+      </attribute>
+      <row>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>a</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>c</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>d</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>e</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>f</string>
+       </property>
+      </column>
+      <column/>
+      <item row="0" column="0">
+       <property name="text">
+        <string>ɪ</string>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>ə</string>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string>ɒ</string>
+       </property>
+      </item>
+      <item row="0" column="3">
+       <property name="text">
+        <string>ʊ</string>
+       </property>
+      </item>
+      <item row="0" column="4">
+       <property name="text">
+        <string>ʌ</string>
+       </property>
+      </item>
+      <item row="0" column="5">
+       <property name="text">
+        <string>e</string>
+       </property>
+      </item>
+      <item row="0" column="6">
+       <property name="text">
+        <string>æ</string>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string>ɑː</string>
+       </property>
+      </item>
+      <item row="1" column="1">
+       <property name="text">
+        <string>uː</string>
+       </property>
+      </item>
+      <item row="1" column="2">
+       <property name="text">
+        <string>ɔː</string>
+       </property>
+      </item>
+      <item row="1" column="3">
+       <property name="text">
+        <string>ɜː</string>
+       </property>
+      </item>
+      <item row="1" column="4">
+       <property name="text">
+        <string>iː</string>
+       </property>
+      </item>
+      <item row="1" column="5">
+       <property name="text">
+        <string>ʊə</string>
+       </property>
+      </item>
+      <item row="1" column="6">
+       <property name="text">
+        <string>eə</string>
+       </property>
+      </item>
+      <item row="2" column="0">
+       <property name="text">
+        <string>ɪə</string>
+       </property>
+      </item>
+      <item row="2" column="1">
+       <property name="text">
+        <string>oʊ</string>
+       </property>
+      </item>
+      <item row="2" column="2">
+       <property name="text">
+        <string>əʊ</string>
+       </property>
+      </item>
+      <item row="2" column="3">
+       <property name="text">
+        <string>aʊ</string>
+       </property>
+      </item>
+      <item row="2" column="4">
+       <property name="text">
+        <string>ɔɪ</string>
+       </property>
+      </item>
+      <item row="2" column="5">
+       <property name="text">
+        <string>aɪ</string>
+       </property>
+      </item>
+      <item row="2" column="6">
+       <property name="text">
+        <string>eɪ</string>
+       </property>
+      </item>
+      <item row="3" column="0">
+       <property name="text">
+        <string>b</string>
+       </property>
+      </item>
+      <item row="3" column="1">
+       <property name="text">
+        <string>d</string>
+       </property>
+      </item>
+      <item row="3" column="2">
+       <property name="text">
+        <string>ɡ</string>
+       </property>
+      </item>
+      <item row="3" column="3">
+       <property name="text">
+        <string>v</string>
+       </property>
+      </item>
+      <item row="3" column="4">
+       <property name="text">
+        <string>ð</string>
+       </property>
+      </item>
+      <item row="3" column="5">
+       <property name="text">
+        <string>z</string>
+       </property>
+      </item>
+      <item row="3" column="6">
+       <property name="text">
+        <string>ʒ</string>
+       </property>
+      </item>
+      <item row="4" column="0">
+       <property name="text">
+        <string>dʒ</string>
+       </property>
+      </item>
+      <item row="4" column="1">
+       <property name="text">
+        <string>tʃ</string>
+       </property>
+      </item>
+      <item row="4" column="2">
+       <property name="text">
+        <string>ʃ</string>
+       </property>
+      </item>
+      <item row="4" column="3">
+       <property name="text">
+        <string>s</string>
+       </property>
+      </item>
+      <item row="4" column="4">
+       <property name="text">
+        <string>θ</string>
+       </property>
+      </item>
+      <item row="4" column="5">
+       <property name="text">
+        <string>f</string>
+       </property>
+      </item>
+      <item row="4" column="6">
+       <property name="text">
+        <string>k</string>
+       </property>
+      </item>
+      <item row="5" column="0">
+       <property name="text">
+        <string>t</string>
+       </property>
+      </item>
+      <item row="5" column="1">
+       <property name="text">
+        <string>p</string>
+       </property>
+      </item>
+      <item row="5" column="2">
+       <property name="text">
+        <string>ŋ</string>
+       </property>
+      </item>
+      <item row="5" column="3">
+       <property name="text">
+        <string>/</string>
+       </property>
+      </item>
+      <item row="5" column="4">
+       <property name="text">
+        <string>[]</string>
+       </property>
+      </item>
+      <item row="5" column="5">
+       <property name="text">
+        <string>ˌ</string>
+       </property>
+      </item>
+      <item row="5" column="6">
+       <property name="text">
+        <string>ˈ</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="add_pron_word">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>50</y>
+        <width>261</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="add_pron_bre">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>100</y>
+        <width>261</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="add_pron_word_label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>操作单词</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="add_pron_bre_label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>100</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>英式发音</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="add_pron_ame">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>150</y>
+        <width>261</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="add_pron_ame_label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>150</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>美式发音</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="add_pron_submit">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>200</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>提交发音</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="add_pron_reset">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>200</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>重置</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="manage_words">
+     <attribute name="title">
+      <string>管理单词</string>
+     </attribute>
+     <widget class="QComboBox" name="manage_word_check_group">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>85</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="duplicatesEnabled">
+       <bool>true</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>无限制</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_manage_word_check_group">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>选择词库</string>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="manage_word_btn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>查看单词</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="manage_word_show_box">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>10</y>
+        <width>381</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="midLineWidth">
+       <number>0</number>
+      </property>
+      <property name="autoScrollMargin">
+       <number>16</number>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <column>
+       <property name="text">
+        <string>所属组别</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>单词</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>词性</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>释义</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="Line" name="line_5">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>0</y>
+        <width>20</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="manage_groups">
+     <attribute name="title">
+      <string>管理词库</string>
+     </attribute>
+     <widget class="QLabel" name="manage_groups_edit_group_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>60</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>操作词库</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="manage_groups_check_group_box">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>20</y>
+        <width>150</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="manage_groups_log">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>19</y>
+        <width>401</width>
+        <height>241</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>221</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="manage_group_btn_group">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="manage_group_add">
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei UI</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	padding: 5px 0;	
+}</string>
+         </property>
+         <property name="text">
+          <string>添加词库</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="manage_group_rename">
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei UI</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	padding: 5px 0;	
+}</string>
+         </property>
+         <property name="text">
+          <string>重命名词库</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="manage_group_remove">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei UI</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	padding: 5px 0;	
+}</string>
+         </property>
+         <property name="text">
+          <string>删除词库</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="manage_group_info">
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei UI</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	padding: 5px 0;	
+}</string>
+         </property>
+         <property name="text">
+          <string>查看词库信息</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>681</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="index_menu">
+    <property name="title">
+     <string>WdAsst</string>
+    </property>
+    <addaction name="close_action"/>
+   </widget>
+   <widget class="QMenu" name="study_plan">
+    <property name="title">
+     <string>学习计划</string>
+    </property>
+    <addaction name="change_standard_group"/>
+   </widget>
+   <addaction name="index_menu"/>
+   <addaction name="study_plan"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="close_action">
+   <property name="text">
+    <string>关闭</string>
+   </property>
+  </action>
+  <action name="actionaaa">
+   <property name="text">
+    <string>aaa</string>
+   </property>
+  </action>
+  <action name="change_standard_group">
+   <property name="text">
+    <string>更改词库</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>close_action</sender>
+   <signal>triggered()</signal>
+   <receiver>WdAsst</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>340</x>
+     <y>155</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <buttongroups>
+  <buttongroup name="search_mode"/>
+  <buttongroup name="test_translation_option_group"/>
+ </buttongroups>
+</ui>
